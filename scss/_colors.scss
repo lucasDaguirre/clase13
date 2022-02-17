@@ -1,47 +1,19 @@
-//Variables Colores
+/* Variables Colores */
+
+// Colores
 $colorPrimary: rgb(123, 2, 153);
 $white: rgb(244, 244, 244);
 $black: rgb(11, 11, 11);
-//Colores con Transparencia
+// Colores con Transparencia
 $black75: rgba(11, 11, 11, 0.750);
 $black50: rgba(11, 11, 11, 0.500);
 $black25: rgba(11, 11, 11, 0.250);
-//Gradientes
+// Gradientes
 $gradientPrimary: linear-gradient(180deg, #8e37a4 0%, #141845 100%);
- ;
 
-body{
-    background-image: $gradientPrimary;
-}
+/* Colores de Elementos Generales*/
 
-.page-header{
-    background-color: $black25;
-    .nav-bar{
-        .nav-menu{
-            .nav-ul{
-                color: $white;
-                .nav-li{
-                    &:hover{
-                        opacity: 0.5;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.hero{
-    .hero-container{
-        .hero-txt{
-            h1{
-                color: $white;
-            }
-            p{
-                color: $white;
-            }
-        }
-    }
-}
+// Botones 
 
 .btn-primary{
     color: $white;
@@ -64,7 +36,49 @@ body{
     }  
 }
 
+/* Colores de Secciones Generales*/
+
+// Body
+
+body{
+    background-image: $gradientPrimary;
+}
+
+// Header
+.page-header{
+    background-color: $black25;
+    color: $white;
+    .nav-bar{
+        .nav-menu{
+            .nav-ul{
+                .nav-li{
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Footer
 .footer{
     background-color: $colorPrimary;
     color: $white;
+}
+
+/* Colores de Secciones de Pagina*/
+
+// Index
+.hero{
+    .hero-container{
+        .hero-txt{
+            h1{
+                color: $white;
+            }
+            p{
+                color: $white;
+            }
+        }
+    }
 }

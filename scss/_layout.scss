@@ -1,4 +1,4 @@
-/*Variables Layout - Inicio*/
+/* Variables Layout */
 
 // Padding/Margin
 $p1: 0.5rem;
@@ -16,10 +16,9 @@ $font5: 3rem;
 $font6: 4rem;
 $font7: 5rem;
 
-/*Variables Layout - Fin*/
+/* Layout Generales */
 
 // Botones
-
 .btn{
     height: 1.5rem;
     padding: $p1;
@@ -29,7 +28,22 @@ $font7: 5rem;
     transition: border-color 0.2s ease;
 }
 
-// Nesting
+// Imagenes
+.contain{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.cover{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Layout Secciones Generales*/
+
+// Header
 .page-header{
     position: fixed;
     height: 5rem;
@@ -40,9 +54,11 @@ $font7: 5rem;
     justify-content: space-between;
 }
 .nav-bar{
+    flex: 1;
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     .nav-logo{
         height: 100%;
         width: auto;
@@ -53,54 +69,19 @@ $font7: 5rem;
     }
     .nav-menu{
         font-size: 1rem;
+        display: none;
         .nav-li{
             display: inline;
             padding: 0 $p1;
         }
     }
 }
-.nav-btn{
-    display: flex;
+.header-btn{
+    display: none;
     gap: $p2;
 }
 
-.hero{
-    height: 100vh;
-    width: 100vw;
-    .hero-container{
-        height: 100%;
-        width: 80%;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        .hero-txt{
-            flex: 1;
-            h1{
-                font-size: $font6;
-            }
-            p{
-                font-size: $font3;
-                padding: $p3 0;
-            }
-            button + button{
-                margin-left: $p2;
-            }
-        }
-        .hero-img{
-            flex: 1;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            .hero-img-wrap{
-                height: 80%;
-                width: auto;
-            }
-        }
-    }
-}
-
+// Footer
 .page-footer{
     width: 100%;
     height: auto;
@@ -122,5 +103,80 @@ $font7: 5rem;
         padding: $p2;
         display: flex;
         justify-content: center;
+    }
+}
+
+/* Layout Secciones de Pagina*/
+
+// Index
+
+.hero{
+    height: 100vh;
+    width: 100vw;
+    .hero-container{
+        height: 100%;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        .hero-txt{
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1{
+                font-size: $font6;
+            }
+            p{
+                font-size: $font3;
+                padding: $p3 0;
+            }
+            button + button{
+                margin-left: $p2;
+            }
+        }
+        .hero-img{
+            flex-basis: 1;
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: flex-end;
+            .hero-img-wrap{
+                height: 80%;
+                width: auto;
+            }
+        }
+    }
+}
+
+/* Media Queries */
+
+// Navbar
+@media only screen and (min-width: 992px) {
+    .header{
+        .nav-bar{
+            flex: none;
+            .nav-menu{
+                display: flex;
+            }
+            .nav-btn{
+                display: none;
+            }
+        }
+        .header-btn{
+            display: flex;
+        }
+    }
+}
+
+// Index
+@media only screen and (min-width: 992px) {
+    .hero{
+        .hero-container{
+            .hero-img{
+                display: flex;
+            }
+        }
     }
 }

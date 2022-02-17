@@ -4,18 +4,6 @@
 @import "colors.scss";
 //
 
-body{
+html{
     font-family: "Open Sans", sans-serif;
-}
-
-.contain{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
-.cover{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 }
