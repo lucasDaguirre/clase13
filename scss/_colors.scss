@@ -14,14 +14,16 @@ body{
     background-image: $gradientPrimary;
 }
 
-.nav-bar{
+.page-header{
     background-color: $black25;
-    .nav-menu{
-        .nav-ul{
-            color: $white;
-            .nav-li{
-                &:hover{
-                    opacity: 0.5;
+    .nav-bar{
+        .nav-menu{
+            .nav-ul{
+                color: $white;
+                .nav-li{
+                    &:hover{
+                        opacity: 0.5;
+                    }
                 }
             }
         }
@@ -60,4 +62,9 @@ body{
         border-color: $white;
         background-color: $white;
     }  
+}
+
+.footer{
+    background-color: $colorPrimary;
+    color: $white;
 }

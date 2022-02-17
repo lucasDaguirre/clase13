@@ -20,6 +20,7 @@ footer, header, nav, section, main {
 
 body {
   line-height: 1;
+  overflow-x: hidden;
 }
 
 ol, ul {
@@ -61,15 +62,23 @@ svg {
   padding: 0.5rem;
   border: 2px solid;
   border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
-.nav-bar {
+.page-header {
   position: fixed;
   height: 5rem;
   width: 100%;
   padding: 0.5rem 1.5rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+
+.nav-bar {
+  height: 100%;
+  display: flex;
   align-items: center;
 }
 .nav-bar .nav-logo {
@@ -81,11 +90,16 @@ svg {
   width: auto;
 }
 .nav-bar .nav-menu {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .nav-bar .nav-menu .nav-li {
   display: inline;
   padding: 0 0.5rem;
+}
+
+.nav-btn {
+  display: flex;
+  gap: 1rem;
 }
 
 .hero {
@@ -110,7 +124,7 @@ svg {
   padding: 1.5rem 0;
 }
 .hero .hero-container .hero-txt button + button {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 }
 .hero .hero-container .hero-img {
   flex: 1;
@@ -125,17 +139,41 @@ svg {
   width: auto;
 }
 
+.page-footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.page-footer .footer-btn {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.page-footer .footer-btn a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.page-footer .footer-txt {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
 body {
   background-image: linear-gradient(180deg, #8e37a4 0%, #141845 100%);
 }
 
-.nav-bar {
+.page-header {
   background-color: rgba(11, 11, 11, 0.25);
 }
-.nav-bar .nav-menu .nav-ul {
+.page-header .nav-bar .nav-menu .nav-ul {
   color: #f4f4f4;
 }
-.nav-bar .nav-menu .nav-ul .nav-li:hover {
+.page-header .nav-bar .nav-menu .nav-ul .nav-li:hover {
   opacity: 0.5;
 }
 
@@ -165,6 +203,11 @@ body {
   color: #7b0299;
   border-color: #f4f4f4;
   background-color: #f4f4f4;
+}
+
+.footer {
+  background-color: #7b0299;
+  color: #f4f4f4;
 }
 
 body {

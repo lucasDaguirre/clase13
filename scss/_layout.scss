@@ -25,16 +25,23 @@ $font7: 5rem;
     padding: $p1;
     border: 2px solid;
     border-radius: 0.5rem;
+    transition: background-color 0.2s ease;
+    transition: border-color 0.2s ease;
 }
 
 // Nesting
-.nav-bar{
+.page-header{
     position: fixed;
     height: 5rem;
     width: 100%;
     padding: $p1 $p3; 
     display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+.nav-bar{
+    height: 100%;
+    display: flex;
     align-items: center;
     .nav-logo{
         height: 100%;
@@ -45,15 +52,16 @@ $font7: 5rem;
         }
     }
     .nav-menu{
-        font-size: 1.2rem;
+        font-size: 1rem;
         .nav-li{
             display: inline;
             padding: 0 $p1;
         }
-
-
-
     }
+}
+.nav-btn{
+    display: flex;
+    gap: $p2;
 }
 
 .hero{
@@ -75,7 +83,7 @@ $font7: 5rem;
                 padding: $p3 0;
             }
             button + button{
-                margin-left: $p3;
+                margin-left: $p2;
             }
         }
         .hero-img{
@@ -90,5 +98,29 @@ $font7: 5rem;
                 width: auto;
             }
         }
+    }
+}
+
+.page-footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .footer-btn{
+        padding: $p2;
+        display: flex;
+        justify-content: center;
+        gap: $p2;
+        a{
+            display: flex;
+            align-items: center;
+            padding: $p1;
+        }
+    }
+    .footer-txt{
+        padding: $p2;
+        display: flex;
+        justify-content: center;
     }
 }
