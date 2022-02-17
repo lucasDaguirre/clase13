@@ -1,0 +1,94 @@
+/*Variables Layout - Inicio*/
+
+// Padding/Margin
+$p1: 0.5rem;
+$p2: 1rem;
+$p3: 1.5rem;
+$p4: 2rem;
+$p5: 3rem;
+
+// Font Size
+$font1: 1rem;
+$font2: 1.25rem;
+$font3: 1.5rem;
+$font4: 2rem;
+$font5: 3rem;
+$font6: 4rem;
+$font7: 5rem;
+
+/*Variables Layout - Fin*/
+
+// Botones
+
+.btn{
+    height: 1.5rem;
+    padding: $p1;
+    border: 2px solid;
+    border-radius: 0.5rem;
+}
+
+// Nesting
+.nav-bar{
+    position: fixed;
+    height: 5rem;
+    width: 100%;
+    padding: $p1 $p3; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav-logo{
+        height: 100%;
+        width: auto;
+        .logo-wrap{
+            height: 100%;
+            width: auto;
+        }
+    }
+    .nav-menu{
+        font-size: 1.2rem;
+        .nav-li{
+            display: inline;
+            padding: 0 $p1;
+        }
+
+
+
+    }
+}
+
+.hero{
+    height: 100vh;
+    width: 100vw;
+    .hero-container{
+        height: 100%;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        .hero-txt{
+            flex: 1;
+            h1{
+                font-size: $font6;
+            }
+            p{
+                font-size: $font3;
+                padding: $p3 0;
+            }
+            button + button{
+                margin-left: $p3;
+            }
+        }
+        .hero-img{
+            flex: 1;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            .hero-img-wrap{
+                height: 80%;
+                width: auto;
+            }
+        }
+    }
+}
